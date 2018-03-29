@@ -12,17 +12,13 @@ public class CPE10473 {
 			System.out.println(f(input));
 		}		
 	}
-	public static int f(int number){
-		String input = Integer.toString(number);
-		int sum;
-		if(input.length() != 1){
-			sum = 0;
-			for (int i = 0; i < input.length(); i++) {
-				sum += Integer.parseInt(input.substring(i, i+1));
-			}
-	    }else{
-	    	return number;
-	    }
-		return f(sum);
+	public static int f(int input){
+		int sum = 0;
+		if(input < 10) return input;
+	    while(input != 0) {
+			sum += input%10;
+			input /= 10;
+		}
+	    return f(sum);
 	}
 }
