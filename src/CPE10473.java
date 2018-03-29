@@ -6,9 +6,7 @@ public class CPE10473 {
 		int input;
 		while(sc.hasNext()){
 			input = sc.nextInt();
-			if(input == 0){
-				break;
-			}
+			if(input == 0) break;
 			System.out.println(f(input));
 		}		
 	}
